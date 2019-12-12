@@ -19,7 +19,7 @@ from dssd.utils.misc import str2bool
 
 
 def train(cfg, args):
-    logger = logging.getLogger('SSD.trainer')
+    logger = logging.getLogger('DSSD.trainer')
     model = build_detection_model(cfg)
     device = torch.device(cfg.MODEL.DEVICE)
     model.to(device)
@@ -92,7 +92,7 @@ def main():
     if cfg.OUTPUT_DIR:
         mkdir(cfg.OUTPUT_DIR)
 
-    logger = setup_logger("SSD", dist_util.get_rank(), cfg.OUTPUT_DIR)
+    logger = setup_logger("DSSD", dist_util.get_rank(), cfg.OUTPUT_DIR)
     logger.info("Using {} GPUs".format(num_gpus))
     logger.info(args)
 

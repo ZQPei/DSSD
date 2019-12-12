@@ -54,7 +54,7 @@ def do_train(cfg, model,
              device,
              arguments,
              args):
-    logger = logging.getLogger("SSD.trainer")
+    logger = logging.getLogger("DSSD.trainer")
     logger.info("Start training ...")
     meters = MetricLogger()
 

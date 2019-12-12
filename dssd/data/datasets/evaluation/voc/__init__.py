@@ -40,7 +40,7 @@ def voc_evaluation(dataset, predictions, output_dir, iteration=None):
                                 gt_difficults=gt_difficults,
                                 iou_thresh=0.5,
                                 use_07_metric=True)
-    logger = logging.getLogger("SSD.inference")
+    logger = logging.getLogger("DSSD.inference")
     result_str = "mAP: {:.4f}\n".format(result["map"])
     metrics = {'mAP': result["map"]}
     for i, ap in enumerate(result["ap"]):

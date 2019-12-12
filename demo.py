@@ -75,7 +75,7 @@ def run_demo(cfg, ckpt, score_threshold, images_dir, output_dir, dataset_type):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="SSD Demo.")
+    parser = argparse.ArgumentParser(description="DSSD Demo.")
     parser.add_argument(
         "--config-file",
         default="",

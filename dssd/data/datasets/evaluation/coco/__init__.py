@@ -32,7 +32,7 @@ def coco_evaluation(dataset, predictions, output_dir, iteration=None):
         )
     iou_type = 'bbox'
     json_result_file = os.path.join(output_dir, iou_type + ".json")
-    logger = logging.getLogger("SSD.inference")
+    logger = logging.getLogger("DSSD.inference")
     logger.info('Writing results to {}...'.format(json_result_file))
     with open(json_result_file, "w") as f:
         json.dump(coco_results, f)

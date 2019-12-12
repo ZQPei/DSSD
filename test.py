@@ -15,7 +15,7 @@ from dssd.utils.logger import setup_logger
 
 
 def evaluation(cfg, ckpt, distributed):
-    logger = logging.getLogger("SSD.inference")
+    logger = logging.getLogger("DSSD.inference")
 
     model = build_detection_model(cfg)
     checkpointer = CheckPointer(model, save_dir=cfg.OUTPUT_DIR, logger=logger)
@@ -26,7 +26,7 @@ def evaluation(cfg, ckpt, distributed):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='SSD Evaluation on VOC and COCO dataset.')
+    parser = argparse.ArgumentParser(description='DSSD Evaluation on VOC and COCO dataset.')
     parser.add_argument(
         "--config-file",
         default="",
@@ -68,7 +68,7 @@ def main():
     cfg.merge_from_list(args.opts)
     cfg.freeze()
 
-    logger = setup_logger("SSD", dist_util.get_rank(), cfg.OUTPUT_DIR)
+    logger = setup_logger("DSSD", dist_util.get_rank(), cfg.OUTPUT_DIR)
     logger.info("Using {} GPUs".format(num_gpus))
     logger.info(args)
 
