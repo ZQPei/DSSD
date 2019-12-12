@@ -14,7 +14,6 @@ class DSSDDetector(nn.Module):
         self.box_head = build_box_head(cfg)
 
     def forward(self, images, targets=None):
-        import ipdb; ipdb.set_trace()
         features = self.backbone(images)
         features = self.decoder(features)
         detections, detector_losses = self.box_head(features, targets)
