@@ -24,3 +24,4 @@ ext/torch_extension.egg-info/
 .DS_Store
 
 outputs/
+.vscode/

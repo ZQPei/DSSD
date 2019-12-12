@@ -5,13 +5,13 @@ import os
 import torch
 import torch.utils.data
 
-from ssd.config import cfg
-from ssd.engine.inference import do_evaluation
-from ssd.modeling.detector import build_detection_model
-from ssd.utils import dist_util
-from ssd.utils.checkpoint import CheckPointer
-from ssd.utils.dist_util import synchronize
-from ssd.utils.logger import setup_logger
+from dssd.config import cfg
+from dssd.engine.inference import do_evaluation
+from dssd.modeling.detector import build_detection_model
+from dssd.utils import dist_util
+from dssd.utils.checkpoint import CheckPointer
+from dssd.utils.dist_util import synchronize
+from dssd.utils.logger import setup_logger
 
 
 def evaluation(cfg, ckpt, distributed):

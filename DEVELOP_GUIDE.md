@@ -6,7 +6,7 @@ For example, create `ssd/data/datasets/my_dataset.py`:
 ```python
 import torch.utils.data
 
-from ssd.structures.container import Container
+from dssd.structures.container import Container
 
 class MyDataset(torch.utils.data.Dataset):
     def __init__(self, ..., transform=None, target_transform=None):
@@ -89,8 +89,8 @@ For example, create `ssd/modeling/backbone/my_backbone.py`:
 ```python
 import torch.nn as nn
 
-from ssd.modeling import registry
-from ssd.utils.model_zoo import load_state_dict_from_url
+from dssd.modeling import registry
+from dssd.utils.model_zoo import load_state_dict_from_url
 
 
 class MyBackbone(nn.Module):

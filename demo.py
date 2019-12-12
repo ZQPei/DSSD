@@ -6,15 +6,15 @@ import torch
 from PIL import Image
 from vizer.draw import draw_boxes
 
-from ssd.config import cfg
-from ssd.data.datasets import COCODataset, VOCDataset
+from dssd.config import cfg
+from dssd.data.datasets import COCODataset, VOCDataset
 import argparse
 import numpy as np
 
-from ssd.data.transforms import build_transforms
-from ssd.modeling.detector import build_detection_model
-from ssd.utils import mkdir
-from ssd.utils.checkpoint import CheckPointer
+from dssd.data.transforms import build_transforms
+from dssd.modeling.detector import build_detection_model
+from dssd.utils import mkdir
+from dssd.utils.checkpoint import CheckPointer
 
 
 @torch.no_grad()
