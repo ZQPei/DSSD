@@ -1,0 +1,22 @@
+MODEL:
+  NUM_CLASSES: 81
+  PRIORS:
+    FEATURE_MAPS: [40, 20, 10, 5, 3, 1]
+    STRIDES: [8, 16, 32, 64, 107, 320]
+    MIN_SIZES: [21, 45, 99, 153, 207, 261]
+    MAX_SIZES: [45, 99, 153, 207, 261, 315]
+    ASPECT_RATIOS: [[2, 3], [2, 3], [2, 3], [2, 3], [2, 3], [2, 3]]
+    BOXES_PER_LOCATION: [6, 6, 6, 6, 6, 6]
+INPUT:
+  IMAGE_SIZE: 320
+DATASETS:
+  TRAIN: ("coco_2014_train", )
+  TEST: ("coco_2014_minival", )
+SOLVER:
+  MAX_ITER: 400000
+  LR_STEPS: [280000, 360000]
+  GAMMA: 0.1
+  BATCH_SIZE: 16
+  LR: 1e-3
+
+OUTPUT_DIR: 'outputs/resnet101_dssd320_coco_trainval35k'

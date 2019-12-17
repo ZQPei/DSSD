@@ -46,7 +46,7 @@ def train(cfg, args):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Single Shot MultiBox Detector Training With PyTorch')
+    parser = argparse.ArgumentParser(description='DSSD: Deconvolutional Single Shot MultiBox Detector Training With PyTorch')
     parser.add_argument(
         "--config-file",
         default="",
@@ -56,8 +56,8 @@ def main():
     )
     parser.add_argument("--local_rank", type=int, default=0)
     parser.add_argument('--log_step', default=10, type=int, help='Print logs every log_step')
-    parser.add_argument('--save_step', default=2500, type=int, help='Save checkpoint every save_step')
-    parser.add_argument('--eval_step', default=2500, type=int, help='Evaluate dataset every eval_step, disabled when eval_step < 0')
+    parser.add_argument('--save_step', default=10000, type=int, help='Save checkpoint every save_step')
+    parser.add_argument('--eval_step', default=10000, type=int, help='Evaluate dataset every eval_step, disabled when eval_step < 0')
     parser.add_argument('--use_tensorboard', default=True, type=str2bool)
     parser.add_argument(
         "--skip-test",

@@ -23,5 +23,5 @@ ext/torch_extension.egg-info/
 .idea
 .DS_Store
 
-outputs/
+outputs
 .vscode/

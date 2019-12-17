@@ -1,4 +1,4 @@
-from .ssd_detector import DSSDDetector
+from .dssd_detector import DSSDDetector
 
 _DETECTION_META_ARCHITECTURES = {
     "DSSDDetector": DSSDDetector
