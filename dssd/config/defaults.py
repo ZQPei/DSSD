@@ -29,7 +29,7 @@ _C.MODEL.DECODER.WITH_DECODER = True
 _C.MODEL.DECODER.NAME = 'DSSDDecoder'
 _C.MODEL.DECODER.OUT_CHANNELS = [1024, 512, 512, 512, 512, 512] # 1, 3, 5, 10, 20, 40
 _C.MODEL.DECODER.DECONV_KERNEL_SIZE = [3, 1, 2, 2, 2]
-_C.MODEL.DECODER.ELMW_TYPE = "sum"
+_C.MODEL.DECODER.ELMW_TYPE = "prod"  # ["sum", "prod"]
 
 # -----------------------------------------------------------------------------
 # PRIORS

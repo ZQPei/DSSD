@@ -74,7 +74,8 @@ def do_train(cfg, model,
     for iteration, (images, targets, _) in enumerate(data_loader, start_iter):
         iteration = iteration + 1
         arguments["iteration"] = iteration
-        scheduler.step()
+        if iteration > start_iter + 1 or torch.__version__[:3] <= '1.1':
+            scheduler.step()
 
         images = images.to(device)
         targets = targets.to(device)
