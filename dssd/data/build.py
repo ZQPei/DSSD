@@ -46,7 +46,7 @@ def make_data_loader(cfg, is_train=True, distributed=False, max_iter=None, start
             sampler = torch.utils.data.sampler.SequentialSampler(dataset)
 
         batch_size = cfg.SOLVER.BATCH_SIZE if is_train else cfg.TEST.BATCH_SIZE
-        batch_sampler = torch.utils.data.sampler.BatchSampler(sampler=sampler, batch_size=batch_size, drop_last=True)
+        batch_sampler = torch.utils.data.sampler.BatchSampler(sampler=sampler, batch_size=batch_size, drop_last=True if is_train else False)
         if max_iter is not None:
             batch_sampler = samplers.IterationBasedBatchSampler(batch_sampler, num_iterations=max_iter, start_iter=start_iter)
 
