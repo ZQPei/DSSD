@@ -89,6 +89,12 @@ Where `COCO_ROOT` default is `datasets` folder in current project, you can creat
 ### Single GPU training
 
 ```bash
+# edit script file
+vi scripts/resnet101_dssd320_voc0712_single_gpu.sh
+
+# change line 2 export VOC_ROOT="/data/pzq/voc/VOCdevkit" to your path of VOC dataset.
+# do the same change to the rest scripts file.
+
 # for example, train DSSD320 on VOC:
 sh scripts/resnet101_dssd320_voc0712_single_gpu.sh
 ```
