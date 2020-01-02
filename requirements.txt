@@ -6,3 +6,5 @@ yacs
 vizer
 tensorboardX
 pycocotools
+pyyaml
+easydict
