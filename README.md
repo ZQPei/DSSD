@@ -101,7 +101,7 @@ sh scripts/resnet101_dssd320_voc0712_single_gpu.sh
 ### Multi-GPU training
 
 ```bash
-# for example, train SSD300 with 4 GPUs:
+# for example, train DSSD320 with 4 GPUs:
 sh scripts/resnet101_dssd320_voc0712_multi_gpu.sh
 ```
 
@@ -110,14 +110,14 @@ sh scripts/resnet101_dssd320_voc0712_multi_gpu.sh
 ### Single GPU evaluating
 
 ```bash
-# for example, evaluate SSD300:
+# for example, evaluate DSSD320:
 python test.py --config-file configs/resnet101_dssd320_voc0712.yaml
 ```
 
 ### Multi-GPU evaluating
 
 ```bash
-# for example, evaluate SSD300 with 4 GPUs:
+# for example, evaluate DSSD320 with 4 GPUs:
 export NGPUS=4
 python -m torch.distributed.launch --nproc_per_node=$NGPUS test.py --config-file configs/resnet101_dssd320_voc0712.yaml
 ```
